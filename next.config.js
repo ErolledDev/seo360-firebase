@@ -63,9 +63,9 @@ const nextConfig = {
     ],
   },
   
-  // Environment variable configuration
+  // Environment variable configuration - Force the correct base URL
   env: {
-    NEXT_PUBLIC_BASE_URL: process.env.NEXT_PUBLIC_BASE_URL,
+    NEXT_PUBLIC_BASE_URL: process.env.NEXT_PUBLIC_BASE_URL || 'https://seo360.xyz',
     NEXT_PUBLIC_GA_ID: process.env.NEXT_PUBLIC_GA_ID,
   },
   

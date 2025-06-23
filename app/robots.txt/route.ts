@@ -1,7 +1,9 @@
 import { NextResponse } from 'next/server'
 
 export async function GET() {
+  // Force the correct base URL
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://seo360.xyz'
+  console.log('Robots.txt generation - Base URL:', baseUrl)
   
   const robotsTxt = `User-agent: *
 Allow: /
@@ -40,6 +42,8 @@ Disallow: /static/
 
 # Allow sitemap access
 Allow: /sitemap.xml`
+
+  console.log('Robots.txt generated successfully with base URL:', baseUrl)
 
   return new NextResponse(robotsTxt, {
     headers: {

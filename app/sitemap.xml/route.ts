@@ -3,13 +3,17 @@ import { redirectsApi } from '../../lib/redirectsApi'
 
 export async function GET() {
   try {
+    // Force the correct base URL
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://seo360.xyz'
+    console.log('Sitemap generation - Base URL:', baseUrl)
+    
     const currentDate = new Date().toISOString().split('T')[0]
     
     // Fetch redirects from API
     let redirects = {}
     try {
       redirects = await redirectsApi.getAllRedirects()
+      console.log('Sitemap generation - Redirects loaded:', Object.keys(redirects).length)
     } catch (error) {
       console.error('Error fetching redirects for sitemap:', error)
       // Continue with empty redirects if API fails
@@ -63,6 +67,8 @@ export async function GET() {
     
     sitemap += `
 </urlset>`
+    
+    console.log('Sitemap generated successfully with base URL:', baseUrl)
     
     return new NextResponse(sitemap, {
       headers: {
