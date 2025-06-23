@@ -17,11 +17,11 @@ export default function SimpleFooter() {
                 <h3 className="text-xl font-bold bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
                   SEO360
                 </h3>
-                <p className="text-sm text-gray-400">Your Freelance SEO Tool</p>
+                <p className="text-sm text-gray-400">Your Personal SEO Tool</p>
               </div>
             </div>
             <p className="text-gray-300 text-sm leading-relaxed mb-4">
-              Your personal freelancing tool for boosting client website visibility, Domain Authority, and backlinks. 
+              Your personal tool for boosting client website visibility, Domain Authority, and backlinks. 
               Attract more clients and deliver exceptional SEO results.
             </p>
           </div>
@@ -112,14 +112,14 @@ export default function SimpleFooter() {
         <div className="border-t border-gray-700 mt-8 pt-8">
           <div className="flex flex-col sm:flex-row justify-between items-center">
             <div className="text-gray-400 text-sm mb-4 sm:mb-0">
-              <p>&copy; {currentYear} SEO360. Built for freelance SEO success.</p>
+              <p>&copy; {currentYear} SEO360. Built for SEO success.</p>
             </div>
             <div className="flex items-center space-x-6 text-sm">
               <a href="/sitemap.xml" target="_blank" className="text-gray-400 hover:text-blue-400 transition-colors">
                 Sitemap
               </a>
               <span className="text-gray-500">•</span>
-              <span className="text-gray-400">Made with ❤️ for SEO Freelancers</span>
+              <span className="text-gray-400">Made with ❤️ for SEO Professionals</span>
             </div>
           </div>
         </div>

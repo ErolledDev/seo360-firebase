@@ -4,7 +4,7 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Contact Us | SEO360',
-  description: 'Get in touch with SEO360 for freelance SEO services, client acquisition strategies, and Domain Authority boosting. We\'re here to help you grow your business.',
+  description: 'Get in touch with SEO360 for SEO services, client acquisition strategies, and Domain Authority boosting. We\'re here to help you grow your business.',
   robots: {
     index: true,
     follow: true,
@@ -20,7 +20,7 @@ export default function ContactPage() {
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Have questions about our freelance SEO services? We're here to help you attract more clients and boost their visibility.
+            Have questions about our SEO services? We're here to help you attract more clients and boost their visibility.
           </p>
         </div>
 
@@ -41,7 +41,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="text-lg font-semibold text-blue-900 mb-2">Email Support</h3>
                     <p className="text-blue-800 mb-3">
-                      For general questions, freelance SEO services, or client acquisition strategies.
+                      For general questions, SEO services, or client acquisition strategies.
                     </p>
                     <p className="text-blue-900 font-medium">erolledph+seo360@gmail.com</p>
                     <p className="text-sm text-blue-700 mt-1">Response time: Within 24 hours</p>
@@ -228,7 +228,7 @@ export default function ContactPage() {
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Can I use this for multiple clients?</h3>
                 <p className="text-gray-600 text-sm">
-                  Yes! SEO360 is designed for freelancers and agencies managing multiple client accounts. 
+                  Yes! SEO360 is designed for professionals managing multiple client accounts. 
                   You can create unlimited redirects for all your clients.
                 </p>
               </div>
@@ -237,7 +237,7 @@ export default function ContactPage() {
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Is there a limit on client projects?</h3>
                 <p className="text-gray-600 text-sm">
                   Currently, there are no hard limits on the number of client projects you can manage. 
-                  We monitor usage to ensure fair access for all freelancers.
+                  We monitor usage to ensure fair access for all users.
                 </p>
               </div>
             </div>
@@ -263,7 +263,7 @@ export default function ContactPage() {
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Can I white-label this service?</h3>
                 <p className="text-gray-600 text-sm">
                   Currently, the service uses our domain for maximum SEO benefit. White-label 
-                  solutions are planned for future releases based on freelancer demand.
+                  solutions are planned for future releases based on user demand.
                 </p>
               </div>
             </div>

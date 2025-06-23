@@ -18,16 +18,16 @@ export default function HomePage() {
             </div>
             
             <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-gray-900 mb-8 leading-tight">
-              <span className="block">Attract More Clients &</span>
+              <span className="block">Boost Your Sales &</span>
               <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
-                Boost Their SEO
+                Improve Visibility
               </span>
               <span className="block text-4xl sm:text-5xl md:text-6xl mt-2">with SEO360</span>
             </h1>
             
             <p className="text-xl sm:text-2xl text-gray-600 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Your personal freelancing tool for <span className="font-bold text-blue-600">boosting client visibility</span>, Domain Authority, and backlinks. 
-              <span className="block mt-2 text-lg text-gray-500">Perfect for SEO freelancers, consultants, and digital marketing professionals.</span>
+              Your personal tool for <span className="font-bold text-blue-600">boosting client visibility</span>, Domain Authority, and backlinks. 
+              <span className="block mt-2 text-lg text-gray-500">Perfect for attracting more clients and delivering exceptional SEO results.</span>
             </p>
             
             {/* Value Proposition */}

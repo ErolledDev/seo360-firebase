@@ -15,7 +15,7 @@ export default function SimpleHeader() {
               <h1 className="text-xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
                 SEO360
               </h1>
-              <p className="text-xs text-gray-500">Your Freelance SEO Tool</p>
+              <p className="text-xs text-gray-500">Your Personal SEO Tool</p>
             </div>
           </Link>
         </div>

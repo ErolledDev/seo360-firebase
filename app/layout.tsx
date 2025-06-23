@@ -10,11 +10,11 @@ const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://seo360.xyz'
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: 'SEO360 - Boost Client Visibility & Domain Authority | Freelance SEO Tool',
+    default: 'SEO360 - Boost Client Visibility & Domain Authority',
     template: '%s | SEO360'
   },
-  description: 'SEO360 - Your personal freelancing tool for boosting client website visibility, Domain Authority, and backlinks. Attract more clients with powerful SEO strategies and instant Google indexing.',
-  keywords: ['freelancing SEO', 'client acquisition SEO', 'domain authority boost', 'backlink services', 'SEO freelancer', 'website visibility', 'Google indexing', 'SEO consultant', 'digital marketing freelancer', 'SEO360'],
+  description: 'Boost your sales and improve your visibility and domain authority, attracting more clients and delivering exceptional SEO results.',
+  keywords: ['SEO tool', 'client acquisition', 'domain authority boost', 'backlink services', 'website visibility', 'Google indexing', 'SEO consultant', 'digital marketing', 'sales boost', 'SEO360'],
   authors: [{ name: 'SEO360', url: baseUrl }],
   creator: 'SEO360',
   publisher: 'SEO360',
@@ -41,14 +41,14 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: baseUrl,
     siteName: 'SEO360',
-    title: 'SEO360 - Boost Client Visibility & Domain Authority | Freelance SEO Tool',
-    description: 'Your personal freelancing tool for boosting client website visibility, Domain Authority, and backlinks. Attract more clients with powerful SEO strategies.',
+    title: 'SEO360 - Boost Client Visibility & Domain Authority',
+    description: 'Boost your sales and improve your visibility and domain authority, attracting more clients and delivering exceptional SEO results.',
     images: [
       {
         url: `${baseUrl}/og-image.jpg`,
         width: 1200,
         height: 630,
-        alt: 'SEO360 - Freelance SEO Tool for Client Acquisition',
+        alt: 'SEO360 - Personal Tool for Client Acquisition',
         type: 'image/jpeg',
       },
     ],
@@ -57,8 +57,8 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@seo360xyz',
     creator: '@seo360xyz',
-    title: 'SEO360 - Boost Client Visibility & Domain Authority | Freelance SEO Tool',
-    description: 'Your personal freelancing tool for boosting client website visibility, Domain Authority, and backlinks. Attract more clients with powerful SEO strategies.',
+    title: 'SEO360 - Boost Client Visibility & Domain Authority',
+    description: 'Boost your sales and improve your visibility and domain authority, attracting more clients and delivering exceptional SEO results.',
     images: [`${baseUrl}/og-image.jpg`],
   },
   alternates: {
@@ -124,7 +124,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "SoftwareApplication",
               "name": "SEO360",
-              "description": "Personal freelancing tool for boosting client website visibility, Domain Authority, and backlinks. Professional SEO services for client acquisition.",
+              "description": "Personal tool for boosting client website visibility, Domain Authority, and backlinks. Boost your sales and improve your visibility.",
               "url": baseUrl,
               "applicationCategory": "SEO Tool",
               "operatingSystem": "Web",
@@ -149,9 +149,9 @@ export default function RootLayout({
               "featureList": [
                 "Client Acquisition Tools",
                 "Domain Authority Boosting",
-                "Professional Backlink Services",
+                "Premium Backlink Services",
                 "24-Hour Google Indexing",
-                "SEO Freelancer Dashboard",
+                "SEO Dashboard",
                 "Client Visibility Enhancement",
                 "Automated SEO Reporting",
                 "Mobile-First Optimization"
@@ -169,7 +169,7 @@ export default function RootLayout({
                 "@type": "WebApplication",
                 "name": "SEO360",
                 "url": baseUrl,
-                "description": "Professional SEO freelancing tool for client acquisition and visibility enhancement"
+                "description": "Professional SEO tool for client acquisition and visibility enhancement"
               }
             })
           }}
@@ -185,7 +185,7 @@ export default function RootLayout({
               "name": "SEO360",
               "url": baseUrl,
               "logo": `${baseUrl}/favicon-32x32.png`,
-              "description": "Professional SEO freelancing tool for boosting client website visibility, Domain Authority, and backlinks.",
+              "description": "Professional SEO tool for boosting client website visibility, Domain Authority, and backlinks.",
               "foundingDate": "2025",
               "contactPoint": {
                 "@type": "ContactPoint",
