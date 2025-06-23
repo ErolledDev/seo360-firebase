@@ -226,7 +226,7 @@ export default function TermsOfServicePage() {
               If you have any questions about these Terms of Service, please contact us:
             </p>
             <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
-              <p className="mb-2"><strong>Email:</strong> legal@seoredirects.com</p>
+              <p className="mb-2"><strong>Email:</strong> erolledph+seo360@gmail.com</p>
               <p className="mb-2"><strong>Subject Line:</strong> "Terms of Service Inquiry"</p>
               <p className="mb-2"><strong>Response Time:</strong> We aim to respond within 48 hours</p>
               <p className="text-sm text-gray-600">

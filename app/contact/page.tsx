@@ -43,7 +43,7 @@ export default function ContactPage() {
                     <p className="text-blue-800 mb-3">
                       For general questions, technical support, or account issues.
                     </p>
-                    <p className="text-blue-900 font-medium">support@seoredirects.com</p>
+                    <p className="text-blue-900 font-medium">erolledph+seo360@gmail.com</p>
                     <p className="text-sm text-blue-700 mt-1">Response time: Within 24 hours</p>
                   </div>
                 </div>
@@ -63,7 +63,7 @@ export default function ContactPage() {
                     <p className="text-green-800 mb-3">
                       For technical issues, API questions, or integration help.
                     </p>
-                    <p className="text-green-900 font-medium">tech@seoredirects.com</p>
+                    <p className="text-green-900 font-medium">erolledph+seo360@gmail.com</p>
                     <p className="text-sm text-green-700 mt-1">Response time: Within 12 hours</p>
                   </div>
                 </div>
@@ -82,7 +82,7 @@ export default function ContactPage() {
                     <p className="text-purple-800 mb-3">
                       For partnerships, enterprise solutions, or business development.
                     </p>
-                    <p className="text-purple-900 font-medium">business@seoredirects.com</p>
+                    <p className="text-purple-900 font-medium">erolledph+seo360@gmail.com</p>
                     <p className="text-sm text-purple-700 mt-1">Response time: Within 48 hours</p>
                   </div>
                 </div>

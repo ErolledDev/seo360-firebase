@@ -154,7 +154,7 @@ export default function PrivacyPolicyPage() {
               If you have any questions about this privacy policy or our data practices, please contact us:
             </p>
             <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
-              <p className="mb-2"><strong>Email:</strong> privacy@seoredirects.com</p>
+              <p className="mb-2"><strong>Email:</strong> erolledph+seo360@gmail.com</p>
               <p className="mb-2"><strong>Response Time:</strong> We aim to respond within 48 hours</p>
               <p className="text-sm text-gray-600">
                 For urgent privacy concerns, please mark your email as "URGENT - Privacy Request"

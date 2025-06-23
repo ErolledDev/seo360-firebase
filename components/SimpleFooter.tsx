@@ -6,7 +6,7 @@ export default function SimpleFooter() {
   return (
     <footer className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-16 mt-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
           {/* Brand Section */}
           <div className="md:col-span-1">
             <div className="flex items-center space-x-3 mb-4">
@@ -48,6 +48,26 @@ export default function SimpleFooter() {
               <li>
                 <a href="/robots.txt" target="_blank" className="text-gray-300 hover:text-blue-400 transition-colors text-sm">
                   Robots.txt
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Tools */}
+          <div>
+            <h4 className="font-semibold mb-4 text-lg text-white">Tools</h4>
+            <ul className="space-y-3">
+              <li>
+                <a 
+                  href="https://snapmails.xyz" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-gray-300 hover:text-blue-400 transition-colors text-sm flex items-center"
+                >
+                  <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                  Snapmail.xyz
                 </a>
               </li>
             </ul>
