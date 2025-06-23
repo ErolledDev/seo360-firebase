@@ -9,11 +9,12 @@ export async function GET() {
     
     const currentDate = new Date().toISOString().split('T')[0]
     
-    // Fetch redirects from API
+    // Force refresh the cache to get latest data
     let redirects = {}
     try {
-      redirects = await redirectsApi.getAllRedirects()
-      console.log('Sitemap generation - Redirects loaded:', Object.keys(redirects).length)
+      console.log('Force refreshing redirects cache for sitemap...')
+      redirects = await redirectsApi.refreshCache()
+      console.log('Sitemap generation - Fresh redirects loaded:', Object.keys(redirects).length)
     } catch (error) {
       console.error('Error fetching redirects for sitemap:', error)
       // Continue with empty redirects if API fails
@@ -69,14 +70,19 @@ export async function GET() {
 </urlset>`
     
     console.log('Sitemap generated successfully with base URL:', baseUrl)
+    console.log('Total URLs in sitemap:', Object.keys(redirects).length + 5) // +5 for static pages
     
     return new NextResponse(sitemap, {
       headers: {
         'Content-Type': 'application/xml; charset=utf-8',
-        'Cache-Control': 'public, max-age=3600, s-maxage=3600',
+        // Reduce cache time to see changes faster
+        'Cache-Control': 'public, max-age=300, s-maxage=300, stale-while-revalidate=600',
         'Access-Control-Allow-Origin': '*',
         'Access-Control-Allow-Methods': 'GET',
         'Access-Control-Allow-Headers': 'Content-Type',
+        // Add timestamp to help with debugging
+        'X-Generated-At': new Date().toISOString(),
+        'X-Redirect-Count': Object.keys(redirects).length.toString(),
       },
     })
   } catch (error) {
@@ -94,15 +100,41 @@ export async function GET() {
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
+  <url>
+    <loc>${baseUrl}/contact</loc>
+    <lastmod>${currentDate}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>${baseUrl}/privacy-policy</loc>
+    <lastmod>${currentDate}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>${baseUrl}/terms-of-service</loc>
+    <lastmod>${currentDate}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>${baseUrl}/disclaimer</loc>
+    <lastmod>${currentDate}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
 </urlset>`
     
     return new NextResponse(basicSitemap, {
       headers: {
         'Content-Type': 'application/xml; charset=utf-8',
-        'Cache-Control': 'public, max-age=3600, s-maxage=3600',
+        'Cache-Control': 'public, max-age=300, s-maxage=300, stale-while-revalidate=600',
         'Access-Control-Allow-Origin': '*',
         'Access-Control-Allow-Methods': 'GET',
         'Access-Control-Allow-Headers': 'Content-Type',
+        'X-Generated-At': new Date().toISOString(),
+        'X-Error': 'true',
       },
     })
   }

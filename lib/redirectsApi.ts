@@ -20,7 +20,7 @@ class RedirectsApiClient {
   private static instance: RedirectsApiClient
   private cache: RedirectsData | null = null
   private cacheTimestamp: number = 0
-  private readonly CACHE_DURATION = 5 * 60 * 1000 // 5 minutes
+  private readonly CACHE_DURATION = 2 * 60 * 1000 // Reduced to 2 minutes for faster updates
   private readonly API_URL = 'https://seo-redirects.netlify.app/api/redirects.json'
   private fetchPromise: Promise<RedirectsData> | null = null
 
@@ -41,10 +41,16 @@ class RedirectsApiClient {
     try {
       console.log('Fetching redirects from API:', this.API_URL)
       
-      const response = await fetch(this.API_URL, {
+      // Add cache busting parameter to ensure fresh data
+      const cacheBuster = Date.now()
+      const urlWithCacheBuster = `${this.API_URL}?t=${cacheBuster}`
+      
+      const response = await fetch(urlWithCacheBuster, {
         headers: {
           'Accept': 'application/json',
-          'Cache-Control': 'no-cache'
+          'Cache-Control': 'no-cache, no-store, must-revalidate',
+          'Pragma': 'no-cache',
+          'Expires': '0'
         }
       })
 
@@ -110,11 +116,21 @@ class RedirectsApiClient {
     return redirect
   }
 
-  // Force refresh cache
+  // Force refresh cache - now with better cache busting
   async refreshCache(): Promise<RedirectsData> {
+    console.log('Force refreshing cache...')
     this.cache = null
     this.cacheTimestamp = 0
+    this.fetchPromise = null
     return this.getAllRedirects()
+  }
+
+  // Clear cache completely
+  clearCache(): void {
+    console.log('Clearing cache completely...')
+    this.cache = null
+    this.cacheTimestamp = 0
+    this.fetchPromise = null
   }
 
   // Get cache status for debugging
@@ -123,7 +139,8 @@ class RedirectsApiClient {
       hasCachedData: this.cache !== null,
       cacheAge: this.cache ? Date.now() - this.cacheTimestamp : 0,
       isValid: this.isCacheValid(),
-      totalRedirects: this.cache ? Object.keys(this.cache).length : 0
+      totalRedirects: this.cache ? Object.keys(this.cache).length : 0,
+      lastFetch: this.cacheTimestamp ? new Date(this.cacheTimestamp).toISOString() : 'never'
     }
   }
 }
