@@ -20,7 +20,7 @@ class RedirectsApiClient {
   private static instance: RedirectsApiClient
   private cache: RedirectsData | null = null
   private cacheTimestamp: number = 0
-  private readonly CACHE_DURATION = 1 * 60 * 1000 // Reduced to 1 minute for faster updates
+  private readonly CACHE_DURATION = 30 * 1000 // 30 seconds for faster updates
   private readonly API_URL = 'https://seo-redirects.netlify.app/api/redirects.json'
   private fetchPromise: Promise<RedirectsData> | null = null
 
@@ -44,9 +44,10 @@ class RedirectsApiClient {
       // Add cache busting parameter to ensure fresh data
       const cacheBuster = Date.now()
       const randomSuffix = Math.random().toString(36).substring(7)
-      const urlWithCacheBuster = `${this.API_URL}?t=${cacheBuster}&r=${randomSuffix}`
+      const urlWithCacheBuster = `${this.API_URL}?t=${cacheBuster}&r=${randomSuffix}&v=2`
       
       const response = await fetch(urlWithCacheBuster, {
+        method: 'GET',
         headers: {
           'Accept': 'application/json',
           'Cache-Control': 'no-cache, no-store, must-revalidate',
@@ -55,16 +56,30 @@ class RedirectsApiClient {
           // Add additional headers to bypass any caching
           'X-Requested-With': 'XMLHttpRequest',
           'X-Cache-Bust': cacheBuster.toString(),
+          'User-Agent': 'SEO360-Sitemap-Generator/1.0',
         },
         // Add cache busting at the request level
         cache: 'no-store',
       })
 
       if (!response.ok) {
+        console.error(`HTTP error! status: ${response.status}, statusText: ${response.statusText}`)
         throw new Error(`HTTP error! status: ${response.status}`)
       }
 
+      const contentType = response.headers.get('content-type')
+      if (!contentType || !contentType.includes('application/json')) {
+        console.error('Invalid content type:', contentType)
+        throw new Error(`Invalid content type: ${contentType}`)
+      }
+
       const data = await response.json()
+      
+      // Validate the data structure
+      if (!data || typeof data !== 'object') {
+        throw new Error('Invalid data structure received from API')
+      }
+      
       console.log('API Response received:', Object.keys(data).length, 'redirects')
       console.log('Available slugs:', Object.keys(data).slice(0, 10)) // Log first 10 slugs
       
@@ -84,7 +99,9 @@ class RedirectsApiClient {
         return this.cache
       }
       
-      throw error
+      // Return empty object instead of throwing to prevent sitemap generation failure
+      console.warn('Returning empty redirects object due to API failure')
+      return {}
     }
   }
 
@@ -118,17 +135,22 @@ class RedirectsApiClient {
   async getRedirect(slug: string): Promise<RedirectData | null> {
     console.log('Looking for redirect with slug:', slug)
     
-    const allRedirects = await this.getAllRedirects()
-    const redirect = allRedirects[slug] || null
-    
-    if (redirect) {
-      console.log('Found redirect:', redirect.title)
-    } else {
-      console.log('Redirect not found for slug:', slug)
-      console.log('Available slugs:', Object.keys(allRedirects).slice(0, 20))
+    try {
+      const allRedirects = await this.getAllRedirects()
+      const redirect = allRedirects[slug] || null
+      
+      if (redirect) {
+        console.log('Found redirect:', redirect.title)
+      } else {
+        console.log('Redirect not found for slug:', slug)
+        console.log('Available slugs:', Object.keys(allRedirects).slice(0, 20))
+      }
+      
+      return redirect
+    } catch (error) {
+      console.error('Error getting redirect:', error)
+      return null
     }
-    
-    return redirect
   }
 
   // Force refresh cache - now with better cache busting
