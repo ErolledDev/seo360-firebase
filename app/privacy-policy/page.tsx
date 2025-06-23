@@ -3,8 +3,8 @@ import SimpleFooter from '../../components/SimpleFooter'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | SEO Redirects Pro',
-  description: 'Learn how SEO Redirects Pro collects, uses, and protects your personal information. Our comprehensive privacy policy ensures transparency and data protection.',
+  title: 'Privacy Policy | SEO360',
+  description: 'Learn how SEO360 collects, uses, and protects your personal information. Our comprehensive privacy policy ensures transparency and data protection for freelance SEO services.',
   robots: {
     index: true,
     follow: true,
@@ -31,7 +31,7 @@ export default function PrivacyPolicyPage() {
           <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-8">
             <h2 className="text-lg font-semibold text-blue-900 mb-2">Quick Summary</h2>
             <p className="text-blue-800 text-sm">
-              We collect minimal data necessary to provide our SEO redirect services. We don't sell your data, 
+              We collect minimal data necessary to provide our freelance SEO services. We don't sell your data, 
               and we use industry-standard security measures to protect your information.
             </p>
           </div>
@@ -41,14 +41,14 @@ export default function PrivacyPolicyPage() {
             
             <h3 className="text-xl font-semibold text-gray-800 mb-3">Information You Provide</h3>
             <ul className="list-disc pl-6 mb-4 space-y-2">
-              <li><strong>Redirect Data:</strong> Titles, descriptions, URLs, keywords, and images you submit when creating redirects</li>
-              <li><strong>Contact Information:</strong> Email address if you contact us for support</li>
-              <li><strong>Usage Data:</strong> How you interact with our service to improve functionality</li>
+              <li><strong>SEO Project Data:</strong> Titles, descriptions, URLs, keywords, and images you submit when creating client redirects</li>
+              <li><strong>Contact Information:</strong> Email address if you contact us for support or freelance services</li>
+              <li><strong>Usage Data:</strong> How you interact with our service to improve functionality for freelancers</li>
             </ul>
 
             <h3 className="text-xl font-semibold text-gray-800 mb-3">Automatically Collected Information</h3>
             <ul className="list-disc pl-6 mb-4 space-y-2">
-              <li><strong>Analytics Data:</strong> Page views, click-through rates, and redirect performance via Google Analytics</li>
+              <li><strong>Analytics Data:</strong> Page views, click-through rates, and SEO performance via Google Analytics</li>
               <li><strong>Technical Data:</strong> IP address, browser type, device information, and access times</li>
               <li><strong>Cookies:</strong> Essential cookies for site functionality and analytics cookies (with consent)</li>
             </ul>
@@ -57,9 +57,9 @@ export default function PrivacyPolicyPage() {
           <section className="mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">2. How We Use Your Information</h2>
             <ul className="list-disc pl-6 space-y-2">
-              <li><strong>Service Provision:</strong> Create and manage your SEO redirects</li>
+              <li><strong>Service Provision:</strong> Create and manage your SEO redirects for client projects</li>
               <li><strong>Performance Optimization:</strong> Generate sitemaps and optimize for search engines</li>
-              <li><strong>Analytics:</strong> Understand usage patterns to improve our service</li>
+              <li><strong>Analytics:</strong> Understand usage patterns to improve our freelance SEO tools</li>
               <li><strong>Communication:</strong> Respond to support requests and provide service updates</li>
               <li><strong>Legal Compliance:</strong> Meet legal obligations and protect our rights</li>
             </ul>
@@ -105,7 +105,7 @@ export default function PrivacyPolicyPage() {
             <ul className="list-disc pl-6 space-y-2">
               <li><strong>Essential Cookies:</strong> Required for basic site functionality</li>
               <li><strong>Analytics Cookies:</strong> Google Analytics to understand site usage (can be disabled)</li>
-              <li><strong>Performance Cookies:</strong> Help us optimize site performance</li>
+              <li><strong>Performance Cookies:</strong> Help us optimize site performance for freelancers</li>
             </ul>
             <p className="mt-4 text-sm text-gray-600">
               You can control cookies through your browser settings or our cookie consent banner.
@@ -116,7 +116,7 @@ export default function PrivacyPolicyPage() {
             <h2 className="text-2xl font-bold text-gray-900 mb-4">7. Data Retention</h2>
             <p className="mb-4">We retain your information for as long as necessary to provide our services:</p>
             <ul className="list-disc pl-6 space-y-2">
-              <li><strong>Redirect Data:</strong> Retained while your redirects are active</li>
+              <li><strong>SEO Project Data:</strong> Retained while your client redirects are active</li>
               <li><strong>Analytics Data:</strong> Retained for up to 26 months (Google Analytics default)</li>
               <li><strong>Support Communications:</strong> Retained for 2 years for quality assurance</li>
               <li><strong>Legal Requirements:</strong> Some data may be retained longer for legal compliance</li>

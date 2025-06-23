@@ -3,8 +3,8 @@ import SimpleFooter from '../../components/SimpleFooter'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Contact Us | SEO Redirects Pro',
-  description: 'Get in touch with SEO Redirects Pro for support, questions, or feedback. We\'re here to help you succeed with your SEO redirect campaigns.',
+  title: 'Contact Us | SEO360',
+  description: 'Get in touch with SEO360 for freelance SEO services, client acquisition strategies, and Domain Authority boosting. We\'re here to help you grow your business.',
   robots: {
     index: true,
     follow: true,
@@ -20,7 +20,7 @@ export default function ContactPage() {
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Have questions about our SEO redirect services? We're here to help you succeed with your marketing campaigns.
+            Have questions about our freelance SEO services? We're here to help you attract more clients and boost their visibility.
           </p>
         </div>
 
@@ -41,7 +41,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="text-lg font-semibold text-blue-900 mb-2">Email Support</h3>
                     <p className="text-blue-800 mb-3">
-                      For general questions, technical support, or account issues.
+                      For general questions, freelance SEO services, or client acquisition strategies.
                     </p>
                     <p className="text-blue-900 font-medium">erolledph+seo360@gmail.com</p>
                     <p className="text-sm text-blue-700 mt-1">Response time: Within 24 hours</p>
@@ -61,7 +61,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="text-lg font-semibold text-green-900 mb-2">Technical Support</h3>
                     <p className="text-green-800 mb-3">
-                      For technical issues, API questions, or integration help.
+                      For technical issues, API questions, or SEO tool integration help.
                     </p>
                     <p className="text-green-900 font-medium">erolledph+seo360@gmail.com</p>
                     <p className="text-sm text-green-700 mt-1">Response time: Within 12 hours</p>
@@ -80,7 +80,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="text-lg font-semibold text-purple-900 mb-2">Business Inquiries</h3>
                     <p className="text-purple-800 mb-3">
-                      For partnerships, enterprise solutions, or business development.
+                      For partnerships, enterprise SEO solutions, or bulk client services.
                     </p>
                     <p className="text-purple-900 font-medium">erolledph+seo360@gmail.com</p>
                     <p className="text-sm text-purple-700 mt-1">Response time: Within 48 hours</p>
@@ -95,11 +95,11 @@ export default function ContactPage() {
               <ul className="space-y-2 text-sm text-gray-700">
                 <li className="flex items-start space-x-2">
                   <span className="text-blue-600 font-bold">•</span>
-                  <span>Include your account email or redirect URL when reporting issues</span>
+                  <span>Include your client's website URL when reporting SEO issues</span>
                 </li>
                 <li className="flex items-start space-x-2">
                   <span className="text-blue-600 font-bold">•</span>
-                  <span>Describe the steps you took before encountering the problem</span>
+                  <span>Describe the SEO goals you're trying to achieve for your client</span>
                 </li>
                 <li className="flex items-start space-x-2">
                   <span className="text-blue-600 font-bold">•</span>
@@ -107,7 +107,7 @@ export default function ContactPage() {
                 </li>
                 <li className="flex items-start space-x-2">
                   <span className="text-blue-600 font-bold">•</span>
-                  <span>Check our documentation for common solutions first</span>
+                  <span>Check our documentation for common SEO solutions first</span>
                 </li>
               </ul>
             </div>
@@ -159,24 +159,24 @@ export default function ContactPage() {
                   <option value="">Select a subject</option>
                   <option value="general">General Question</option>
                   <option value="technical">Technical Support</option>
-                  <option value="billing">Billing Question</option>
-                  <option value="feature">Feature Request</option>
-                  <option value="bug">Bug Report</option>
+                  <option value="seo-services">SEO Services</option>
+                  <option value="client-acquisition">Client Acquisition</option>
+                  <option value="domain-authority">Domain Authority Boost</option>
                   <option value="business">Business Inquiry</option>
                   <option value="other">Other</option>
                 </select>
               </div>
 
               <div>
-                <label htmlFor="redirect-url" className="block text-sm font-medium text-gray-700 mb-2">
-                  Redirect URL (if applicable)
+                <label htmlFor="client-url" className="block text-sm font-medium text-gray-700 mb-2">
+                  Client Website URL (if applicable)
                 </label>
                 <input
                   type="url"
-                  id="redirect-url"
-                  name="redirect-url"
+                  id="client-url"
+                  name="client-url"
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  placeholder="https://seo360.xyz/your-redirect"
+                  placeholder="https://client-website.com"
                 />
               </div>
 
@@ -190,7 +190,7 @@ export default function ContactPage() {
                   rows={6}
                   required
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
-                  placeholder="Please describe your question or issue in detail..."
+                  placeholder="Please describe your SEO goals, client needs, or question in detail..."
                 ></textarea>
               </div>
 
@@ -218,52 +218,52 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="space-y-6">
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">How quickly do redirects get indexed?</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">How quickly can I see SEO results for my clients?</h3>
                 <p className="text-gray-600 text-sm">
-                  Most redirects are indexed within 6-24 hours. Indexing speed depends on search engine crawl frequency 
-                  and your content quality.
+                  Most SEO improvements are visible within 6-24 hours. Domain Authority boosts typically show 
+                  within 2-4 weeks depending on the client's current website status.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Can I edit redirects after creation?</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Can I use this for multiple clients?</h3>
                 <p className="text-gray-600 text-sm">
-                  Yes! You can edit all redirect details through our system. Changes are reflected immediately 
-                  and updated in the sitemap.
+                  Yes! SEO360 is designed for freelancers and agencies managing multiple client accounts. 
+                  You can create unlimited redirects for all your clients.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Is there a limit on redirects?</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Is there a limit on client projects?</h3>
                 <p className="text-gray-600 text-sm">
-                  Currently, there are no hard limits on the number of redirects you can create. We monitor usage 
-                  to ensure fair access for all users.
+                  Currently, there are no hard limits on the number of client projects you can manage. 
+                  We monitor usage to ensure fair access for all freelancers.
                 </p>
               </div>
             </div>
 
             <div className="space-y-6">
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Do you provide analytics?</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Do you provide client reporting?</h3>
                 <p className="text-gray-600 text-sm">
-                  Yes, we integrate with Google Analytics to track redirect performance. You can monitor clicks, 
-                  traffic sources, and conversion data.
+                  Yes, we integrate with Google Analytics to track performance. You can generate 
+                  professional reports to show clients their SEO improvements and ROI.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">What about mobile optimization?</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">What about mobile optimization for clients?</h3>
                 <p className="text-gray-600 text-sm">
-                  All redirects are fully mobile-responsive and optimized for mobile search. We follow Google's 
-                  mobile-first indexing best practices.
+                  All SEO redirects are fully mobile-responsive and optimized for mobile search. 
+                  We follow Google's mobile-first indexing best practices.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Can I use custom domains?</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Can I white-label this service?</h3>
                 <p className="text-gray-600 text-sm">
-                  Currently, redirects use our domain for maximum SEO benefit. Custom domain support is planned 
-                  for future releases.
+                  Currently, the service uses our domain for maximum SEO benefit. White-label 
+                  solutions are planned for future releases based on freelancer demand.
                 </p>
               </div>
             </div>

@@ -3,8 +3,8 @@ import SimpleFooter from '../../components/SimpleFooter'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Disclaimer | SEO Redirects Pro',
-  description: 'Important disclaimers about SEO Redirects Pro services, including limitations, warranties, and user responsibilities for SEO and marketing activities.',
+  title: 'Disclaimer | SEO360',
+  description: 'Important disclaimers about SEO360 freelance services, including limitations, warranties, and user responsibilities for SEO and marketing activities.',
   robots: {
     index: true,
     follow: true,
@@ -23,7 +23,7 @@ export default function DisclaimerPage() {
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold text-gray-900 mb-4">Disclaimer</h1>
             <p className="text-xl text-gray-600">
-              Important information about the limitations and scope of our SEO redirect services.
+              Important information about the limitations and scope of our freelance SEO services.
             </p>
             <p className="text-sm text-gray-500 mt-4">Last updated: {lastUpdated}</p>
           </div>
@@ -32,14 +32,14 @@ export default function DisclaimerPage() {
             <h2 className="text-lg font-semibold text-yellow-900 mb-2">⚠️ Important Notice</h2>
             <p className="text-yellow-800 text-sm">
               This disclaimer outlines the limitations of our service and your responsibilities as a user. 
-              Please read carefully before using SEO Redirects Pro.
+              Please read carefully before using SEO360.
             </p>
           </div>
 
           <section className="mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">1. General Disclaimer</h2>
             <p className="mb-4">
-              The information and services provided by SEO Redirects Pro are offered on an "as is" basis. 
+              The information and services provided by SEO360 are offered on an "as is" basis. 
               While we strive to provide accurate and reliable services, we make no representations or warranties 
               of any kind, express or implied, about the completeness, accuracy, reliability, suitability, or 
               availability of our services.
@@ -57,7 +57,7 @@ export default function DisclaimerPage() {
               <h3 className="text-lg font-semibold text-blue-900 mb-2">No Guaranteed Results</h3>
               <p className="text-blue-800 text-sm">
                 SEO results vary significantly based on many factors beyond our control. We cannot guarantee 
-                specific rankings, traffic increases, or business outcomes.
+                specific rankings, traffic increases, or business outcomes for your clients.
               </p>
             </div>
 
@@ -65,8 +65,8 @@ export default function DisclaimerPage() {
             <ul className="list-disc pl-6 space-y-2">
               <li><strong>Search Engine Algorithms:</strong> Constantly changing and beyond our control</li>
               <li><strong>Competition:</strong> Other websites competing for the same keywords</li>
-              <li><strong>Content Quality:</strong> The quality and relevance of your target content</li>
-              <li><strong>Website Authority:</strong> Your domain's existing authority and trust signals</li>
+              <li><strong>Content Quality:</strong> The quality and relevance of your client's content</li>
+              <li><strong>Website Authority:</strong> Your client's domain existing authority and trust signals</li>
               <li><strong>Market Conditions:</strong> Industry trends and seasonal variations</li>
               <li><strong>Technical Factors:</strong> Website speed, mobile-friendliness, and other technical SEO factors</li>
             </ul>

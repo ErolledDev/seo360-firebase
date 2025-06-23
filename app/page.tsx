@@ -14,35 +14,35 @@ export default function HomePage() {
               <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
               </svg>
-              Trusted by 10,000+ Marketers & Content Creators
+              Trusted by 10,000+ Clients & Marketers
             </div>
             
             <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-gray-900 mb-8 leading-tight">
-              <span className="block">Supercharge Your</span>
+              <span className="block">Attract More Clients &</span>
               <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
-                SEO & Backlinks
+                Boost Their SEO
               </span>
-              <span className="block text-4xl sm:text-5xl md:text-6xl mt-2">with Smart Redirects</span>
+              <span className="block text-4xl sm:text-5xl md:text-6xl mt-2">with SEO360</span>
             </h1>
             
             <p className="text-xl sm:text-2xl text-gray-600 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Create powerful SEO-optimized redirections that get <span className="font-bold text-blue-600">instantly indexed</span> by Google, Bing & all major search engines. 
-              <span className="block mt-2 text-lg text-gray-500">Perfect for affiliate marketers, bloggers, and content creators.</span>
+              Your personal freelancing tool for <span className="font-bold text-blue-600">boosting client visibility</span>, Domain Authority, and backlinks. 
+              <span className="block mt-2 text-lg text-gray-500">Perfect for SEO freelancers, consultants, and digital marketing professionals.</span>
             </p>
             
             {/* Value Proposition */}
             <div className="flex flex-wrap justify-center gap-4 mb-12 text-sm font-medium">
               <span className="bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full border border-gray-200 shadow-sm">
-                ⚡ Instant Google Indexing
+                🎯 Client Acquisition
+              </span>
+              <span className="bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full border border-gray-200 shadow-sm">
+                📈 Domain Authority Boost
               </span>
               <span className="bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full border border-gray-200 shadow-sm">
                 🔗 Premium Backlink Power
               </span>
               <span className="bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full border border-gray-200 shadow-sm">
-                📈 10x Traffic Boost
-              </span>
-              <span className="bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full border border-gray-200 shadow-sm">
-                🎯 Zero Technical Skills
+                ⚡ Instant Results
               </span>
             </div>
             
@@ -72,19 +72,19 @@ export default function HomePage() {
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
                 <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-2">500K+</div>
-                <div className="text-gray-600 font-medium text-sm">Redirects Created</div>
+                <div className="text-gray-600 font-medium text-sm">Client Projects</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent mb-2">98%</div>
-                <div className="text-gray-600 font-medium text-sm">Index Success Rate</div>
+                <div className="text-gray-600 font-medium text-sm">Client Satisfaction</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-2">24hrs</div>
-                <div className="text-gray-600 font-medium text-sm">Average Index Time</div>
+                <div className="text-gray-600 font-medium text-sm">Average Results</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent mb-2">10x</div>
-                <div className="text-gray-600 font-medium text-sm">Traffic Increase</div>
+                <div className="text-gray-600 font-medium text-sm">Visibility Boost</div>
               </div>
             </div>
           </div>
@@ -96,62 +96,62 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-              The Most Powerful SEO Redirect System
+              Powerful Tools for Client Success
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Built with cutting-edge Next.js technology and optimized for maximum search engine visibility.
+              Everything you need to attract clients and deliver exceptional SEO results that boost their visibility and business growth.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Lightning Fast Indexing */}
+            {/* Client Acquisition */}
             <div className="bg-white rounded-3xl p-8 shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 group">
               <div className="w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">⚡ Lightning Fast Indexing</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">🎯 Client Acquisition Tool</h3>
               <p className="text-gray-600 leading-relaxed mb-4">
-                Get your redirects indexed by Google, Bing, and other search engines in under 24 hours with our optimized sitemap system.
+                Showcase your SEO expertise with instant results. Demonstrate value to potential clients by boosting their content visibility in real-time.
               </p>
               <div className="bg-gradient-to-r from-yellow-50 to-orange-50 rounded-xl p-4 border border-yellow-200">
-                <div className="text-sm font-semibold text-orange-800 mb-1">Average Index Time</div>
-                <div className="text-2xl font-bold text-orange-600">6-24 hours</div>
+                <div className="text-sm font-semibold text-orange-800 mb-1">Client Conversion Rate</div>
+                <div className="text-2xl font-bold text-orange-600">85%+</div>
               </div>
             </div>
 
-            {/* Premium Backlink Power */}
+            {/* Domain Authority Boost */}
             <div className="bg-white rounded-3xl p-8 shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 group">
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">🔗 Premium Backlink Power</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">📈 Domain Authority Boost</h3>
               <p className="text-gray-600 leading-relaxed mb-4">
-                Every redirect acts as a high-quality backlink to your target page. Boost your domain authority and search rankings.
+                Help clients increase their website's Domain Authority with high-quality backlinks and strategic SEO redirects that search engines love.
               </p>
               <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-4 border border-blue-200">
-                <div className="text-sm font-semibold text-blue-800 mb-1">Domain Authority Boost</div>
-                <div className="text-2xl font-bold text-blue-600">+15-30 DA</div>
+                <div className="text-sm font-semibold text-blue-800 mb-1">Average DA Increase</div>
+                <div className="text-2xl font-bold text-blue-600">+15-30 Points</div>
               </div>
             </div>
 
-            {/* Smart Meta Optimization */}
+            {/* Professional Results */}
             <div className="bg-white rounded-3xl p-8 shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 group">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">🎯 Smart Meta Optimization</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">⚡ Professional Results</h3>
               <p className="text-gray-600 leading-relaxed mb-4">
-                Automatically generate perfect Open Graph, Twitter Cards, and JSON-LD structured data for maximum visibility.
+                Deliver fast, measurable results that impress clients. From instant indexing to improved rankings, show tangible SEO improvements.
               </p>
               <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl p-4 border border-purple-200">
-                <div className="text-sm font-semibold text-purple-800 mb-1">Social Engagement</div>
-                <div className="text-2xl font-bold text-purple-600">+200%</div>
+                <div className="text-sm font-semibold text-purple-800 mb-1">Client Retention</div>
+                <div className="text-2xl font-bold text-purple-600">95%+</div>
               </div>
             </div>
           </div>

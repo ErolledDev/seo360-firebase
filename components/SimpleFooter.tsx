@@ -15,14 +15,14 @@ export default function SimpleFooter() {
               </div>
               <div>
                 <h3 className="text-xl font-bold bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
-                  SEO Redirects Pro
+                  SEO360
                 </h3>
-                <p className="text-sm text-gray-400">Instant Google Indexing</p>
+                <p className="text-sm text-gray-400">Your Freelance SEO Tool</p>
               </div>
             </div>
             <p className="text-gray-300 text-sm leading-relaxed mb-4">
-              Create SEO-optimized redirects that get indexed by search engines in 24 hours. 
-              Boost your organic traffic and dominate search results.
+              Your personal freelancing tool for boosting client website visibility, Domain Authority, and backlinks. 
+              Attract more clients and deliver exceptional SEO results.
             </p>
           </div>
 
@@ -99,11 +99,11 @@ export default function SimpleFooter() {
           <div>
             <h4 className="font-semibold mb-4 text-lg text-white">Features</h4>
             <ul className="space-y-3 text-sm text-gray-300">
-              <li>⚡ Lightning Fast Indexing</li>
+              <li>🎯 Client Acquisition</li>
+              <li>📈 Domain Authority Boost</li>
               <li>🔗 Premium Backlinks</li>
-              <li>📊 Analytics Ready</li>
+              <li>⚡ Instant Results</li>
               <li>📱 Mobile Optimized</li>
-              <li>🛡️ Enterprise Security</li>
             </ul>
           </div>
         </div>
@@ -112,14 +112,14 @@ export default function SimpleFooter() {
         <div className="border-t border-gray-700 mt-8 pt-8">
           <div className="flex flex-col sm:flex-row justify-between items-center">
             <div className="text-gray-400 text-sm mb-4 sm:mb-0">
-              <p>&copy; {currentYear} SEO Redirects Pro. Built for search engine domination.</p>
+              <p>&copy; {currentYear} SEO360. Built for freelance SEO success.</p>
             </div>
             <div className="flex items-center space-x-6 text-sm">
               <a href="/sitemap.xml" target="_blank" className="text-gray-400 hover:text-blue-400 transition-colors">
                 Sitemap
               </a>
               <span className="text-gray-500">•</span>
-              <span className="text-gray-400">Made with ❤️ for SEO</span>
+              <span className="text-gray-400">Made with ❤️ for SEO Freelancers</span>
             </div>
           </div>
         </div>

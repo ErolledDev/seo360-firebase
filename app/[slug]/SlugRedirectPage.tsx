@@ -24,7 +24,7 @@ export default function SlugRedirectPage({ data, allRedirects, currentSlug }: Pr
     setMounted(true)
     if (typeof window !== 'undefined') {
       setCurrentUrl(window.location.href)
-      document.title = `${data.title} | SEO Redirects Pro`
+      document.title = `${data.title} | SEO360`
     }
   }, [data.title])
 

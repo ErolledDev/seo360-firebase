@@ -10,14 +10,14 @@ const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://seo360.xyz'
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: 'SEO Redirects Pro - Instant Google Indexing & Traffic Boost',
-    template: '%s | SEO Redirects Pro'
+    default: 'SEO360 - Boost Client Visibility & Domain Authority | Freelance SEO Tool',
+    template: '%s | SEO360'
   },
-  description: 'Create SEO-optimized redirects that get indexed by Google in 24 hours. Boost organic traffic, improve rankings, and dominate search results with our professional redirect system.',
-  keywords: ['SEO redirects', 'Google indexing', 'organic traffic', 'search rankings', 'backlinks', 'URL shortener', 'sitemap optimization', 'search engine optimization'],
-  authors: [{ name: 'SEO Redirects Pro', url: baseUrl }],
-  creator: 'SEO Redirects Pro',
-  publisher: 'SEO Redirects Pro',
+  description: 'SEO360 - Your personal freelancing tool for boosting client website visibility, Domain Authority, and backlinks. Attract more clients with powerful SEO strategies and instant Google indexing.',
+  keywords: ['freelancing SEO', 'client acquisition SEO', 'domain authority boost', 'backlink services', 'SEO freelancer', 'website visibility', 'Google indexing', 'SEO consultant', 'digital marketing freelancer', 'SEO360'],
+  authors: [{ name: 'SEO360', url: baseUrl }],
+  creator: 'SEO360',
+  publisher: 'SEO360',
   formatDetection: {
     email: false,
     address: false,
@@ -40,25 +40,25 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: baseUrl,
-    siteName: 'SEO Redirects Pro',
-    title: 'SEO Redirects Pro - Instant Google Indexing & Traffic Boost',
-    description: 'Create SEO-optimized redirects that get indexed by Google in 24 hours. Boost organic traffic and dominate search results.',
+    siteName: 'SEO360',
+    title: 'SEO360 - Boost Client Visibility & Domain Authority | Freelance SEO Tool',
+    description: 'Your personal freelancing tool for boosting client website visibility, Domain Authority, and backlinks. Attract more clients with powerful SEO strategies.',
     images: [
       {
         url: `${baseUrl}/og-image.jpg`,
         width: 1200,
         height: 630,
-        alt: 'SEO Redirects Pro - Instant Google Indexing',
+        alt: 'SEO360 - Freelance SEO Tool for Client Acquisition',
         type: 'image/jpeg',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    site: '@seoredirectspro',
-    creator: '@seoredirectspro',
-    title: 'SEO Redirects Pro - Instant Google Indexing & Traffic Boost',
-    description: 'Create SEO-optimized redirects that get indexed by Google in 24 hours. Boost organic traffic and dominate search results.',
+    site: '@seo360xyz',
+    creator: '@seo360xyz',
+    title: 'SEO360 - Boost Client Visibility & Domain Authority | Freelance SEO Tool',
+    description: 'Your personal freelancing tool for boosting client website visibility, Domain Authority, and backlinks. Attract more clients with powerful SEO strategies.',
     images: [`${baseUrl}/og-image.jpg`],
   },
   alternates: {
@@ -123,8 +123,8 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "SoftwareApplication",
-              "name": "SEO Redirects Pro",
-              "description": "Create SEO-optimized redirects that get indexed by Google in 24 hours. Professional redirect system for boosting organic traffic.",
+              "name": "SEO360",
+              "description": "Personal freelancing tool for boosting client website visibility, Domain Authority, and backlinks. Professional SEO services for client acquisition.",
               "url": baseUrl,
               "applicationCategory": "SEO Tool",
               "operatingSystem": "Web",
@@ -147,29 +147,29 @@ export default function RootLayout({
                 "worstRating": "1"
               },
               "featureList": [
+                "Client Acquisition Tools",
+                "Domain Authority Boosting",
+                "Professional Backlink Services",
                 "24-Hour Google Indexing",
-                "SEO-Optimized Redirects",
-                "Automatic Sitemap Generation",
-                "Analytics Integration",
-                "Mobile-First Design",
-                "Video Content Support",
-                "Markdown Editor",
-                "Social Media Sharing"
+                "SEO Freelancer Dashboard",
+                "Client Visibility Enhancement",
+                "Automated SEO Reporting",
+                "Mobile-First Optimization"
               ],
               "provider": {
                 "@type": "Organization",
-                "name": "SEO Redirects Pro",
+                "name": "SEO360",
                 "url": baseUrl,
                 "logo": `${baseUrl}/favicon-32x32.png`,
                 "sameAs": [
-                  "https://twitter.com/seoredirectspro"
+                  "https://twitter.com/seo360xyz"
                 ]
               },
               "mainEntity": {
                 "@type": "WebApplication",
-                "name": "SEO Redirects Pro",
+                "name": "SEO360",
                 "url": baseUrl,
-                "description": "Professional SEO redirect management system"
+                "description": "Professional SEO freelancing tool for client acquisition and visibility enhancement"
               }
             })
           }}
@@ -182,19 +182,19 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              "name": "SEO Redirects Pro",
+              "name": "SEO360",
               "url": baseUrl,
               "logo": `${baseUrl}/favicon-32x32.png`,
-              "description": "Professional SEO redirect system for instant Google indexing and traffic optimization.",
+              "description": "Professional SEO freelancing tool for boosting client website visibility, Domain Authority, and backlinks.",
               "foundingDate": "2025",
               "contactPoint": {
                 "@type": "ContactPoint",
                 "contactType": "customer service",
-                "email": "support@seoredirects.com",
+                "email": "erolledph+seo360@gmail.com",
                 "availableLanguage": "English"
               },
               "sameAs": [
-                "https://twitter.com/seoredirectspro"
+                "https://twitter.com/seo360xyz"
               ]
             })
           }}

@@ -3,8 +3,8 @@ import SimpleFooter from '../../components/SimpleFooter'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Terms of Service | SEO Redirects Pro',
-  description: 'Read our terms of service to understand the rules and guidelines for using SEO Redirects Pro. Learn about user responsibilities, service limitations, and legal agreements.',
+  title: 'Terms of Service | SEO360',
+  description: 'Read our terms of service to understand the rules and guidelines for using SEO360. Learn about user responsibilities, service limitations, and legal agreements for freelance SEO services.',
   robots: {
     index: true,
     follow: true,
@@ -23,7 +23,7 @@ export default function TermsOfServicePage() {
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold text-gray-900 mb-4">Terms of Service</h1>
             <p className="text-xl text-gray-600">
-              Please read these terms carefully before using our SEO redirect services.
+              Please read these terms carefully before using our freelance SEO services.
             </p>
             <p className="text-sm text-gray-500 mt-4">Last updated: {lastUpdated}</p>
           </div>
@@ -31,15 +31,15 @@ export default function TermsOfServicePage() {
           <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-8">
             <h2 className="text-lg font-semibold text-blue-900 mb-2">Agreement Overview</h2>
             <p className="text-blue-800 text-sm">
-              By using SEO Redirects Pro, you agree to these terms. Our service helps you create SEO-optimized 
-              redirects for legitimate marketing and content promotion purposes.
+              By using SEO360, you agree to these terms. Our service helps freelancers create SEO-optimized 
+              redirects for legitimate client marketing and content promotion purposes.
             </p>
           </div>
 
           <section className="mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">1. Acceptance of Terms</h2>
             <p className="mb-4">
-              By accessing or using SEO Redirects Pro ("the Service"), you agree to be bound by these Terms of Service 
+              By accessing or using SEO360 ("the Service"), you agree to be bound by these Terms of Service 
               ("Terms"). If you disagree with any part of these terms, you may not access the Service.
             </p>
             <p className="mb-4">
@@ -49,13 +49,13 @@ export default function TermsOfServicePage() {
 
           <section className="mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">2. Description of Service</h2>
-            <p className="mb-4">SEO Redirects Pro provides:</p>
+            <p className="mb-4">SEO360 provides:</p>
             <ul className="list-disc pl-6 space-y-2">
-              <li>SEO-optimized URL redirection services</li>
+              <li>SEO-optimized URL redirection services for freelance professionals</li>
               <li>Automatic sitemap generation and search engine submission</li>
               <li>Meta tag optimization for social media and search engines</li>
-              <li>Analytics and performance tracking</li>
-              <li>Admin tools for managing redirects</li>
+              <li>Analytics and performance tracking for client projects</li>
+              <li>Tools for managing multiple client SEO campaigns</li>
             </ul>
           </section>
 
@@ -86,7 +86,7 @@ export default function TermsOfServicePage() {
             
             <h3 className="text-xl font-semibold text-gray-800 mb-3">Your Content</h3>
             <ul className="list-disc pl-6 mb-4 space-y-2">
-              <li>You retain ownership of content you submit to create redirects</li>
+              <li>You retain ownership of content you submit to create client redirects</li>
               <li>You grant us a license to use your content to provide the Service</li>
               <li>You represent that you have the right to use all submitted content</li>
               <li>You are responsible for ensuring your content doesn't violate third-party rights</li>
@@ -94,7 +94,7 @@ export default function TermsOfServicePage() {
 
             <h3 className="text-xl font-semibold text-gray-800 mb-3">Our Intellectual Property</h3>
             <ul className="list-disc pl-6 space-y-2">
-              <li>The Service and its original content are owned by SEO Redirects Pro</li>
+              <li>The Service and its original content are owned by SEO360</li>
               <li>Our trademarks, logos, and service marks are protected</li>
               <li>You may not use our intellectual property without permission</li>
             </ul>
@@ -141,7 +141,7 @@ export default function TermsOfServicePage() {
               </p>
             </div>
             <p className="mb-4">
-              TO THE MAXIMUM EXTENT PERMITTED BY LAW, SEO REDIRECTS PRO SHALL NOT BE LIABLE FOR:
+              TO THE MAXIMUM EXTENT PERMITTED BY LAW, SEO360 SHALL NOT BE LIABLE FOR:
             </p>
             <ul className="list-disc pl-6 space-y-2">
               <li>Indirect, incidental, special, consequential, or punitive damages</li>
@@ -155,7 +155,7 @@ export default function TermsOfServicePage() {
           <section className="mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">8. Indemnification</h2>
             <p className="mb-4">
-              You agree to indemnify and hold harmless SEO Redirects Pro from any claims, damages, or expenses 
+              You agree to indemnify and hold harmless SEO360 from any claims, damages, or expenses 
               (including reasonable attorney fees) arising from:
             </p>
             <ul className="list-disc pl-6 space-y-2">
@@ -206,7 +206,7 @@ export default function TermsOfServicePage() {
             <h3 className="text-xl font-semibold text-gray-800 mb-3">Entire Agreement</h3>
             <p className="mb-4">
               These Terms, together with our Privacy Policy, constitute the entire agreement between you and 
-              SEO Redirects Pro regarding the Service.
+              SEO360 regarding the Service.
             </p>
 
             <h3 className="text-xl font-semibold text-gray-800 mb-3">Severability</h3>
@@ -238,7 +238,7 @@ export default function TermsOfServicePage() {
           <div className="bg-green-50 border border-green-200 rounded-lg p-6 mt-8">
             <h3 className="text-lg font-semibold text-green-900 mb-2">Thank You for Using Our Service</h3>
             <p className="text-green-800 text-sm">
-              We appreciate your business and are committed to providing excellent SEO redirect services. 
+              We appreciate your business and are committed to providing excellent freelance SEO services. 
               These terms help ensure a positive experience for all users.
             </p>
           </div>

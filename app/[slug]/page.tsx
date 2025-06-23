@@ -39,7 +39,7 @@ export async function generateMetadata(
   
   if (!data) {
     return {
-      title: 'Page Not Found | SEO Redirects Pro',
+      title: 'Page Not Found | SEO360',
       description: 'The requested page could not be found.',
     }
   }
@@ -48,7 +48,7 @@ export async function generateMetadata(
   const canonicalUrl = `${baseUrl}/${params.slug}`
 
   return {
-    title: `${data.title} | SEO Redirects Pro`,
+    title: `${data.title} | SEO360`,
     description: data.desc,
     keywords: data.keywords,
     alternates: {

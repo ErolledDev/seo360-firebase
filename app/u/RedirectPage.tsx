@@ -43,7 +43,7 @@ function RedirectPageContent() {
     setMounted(true)
     if (typeof window !== 'undefined') {
       setCurrentUrl(window.location.href)
-      document.title = `${title} | SEO Redirects Pro`
+      document.title = `${title} | SEO360`
     }
   }, [title])
 
