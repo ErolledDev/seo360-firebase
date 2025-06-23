@@ -3,7 +3,7 @@ import { redirectsApi } from '../../lib/redirectsApi'
 
 export async function GET() {
   try {
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://your-domain.com'
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://seo360.xyz'
     const currentDate = new Date().toISOString().split('T')[0]
     
     // Fetch redirects from API
@@ -77,7 +77,7 @@ export async function GET() {
     console.error('Error generating sitemap:', error)
     
     // Return a basic sitemap even if there's an error
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://your-domain.com'
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://seo360.xyz'
     const currentDate = new Date().toISOString().split('T')[0]
     
     const basicSitemap = `<?xml version="1.0" encoding="UTF-8"?>

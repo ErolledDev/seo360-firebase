@@ -4,7 +4,7 @@ import { ToastProvider } from '../components/ToastContainer'
 import { Suspense } from 'react'
 import GoogleAnalytics from '../components/GoogleAnalytics'
 
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://your-domain.com'
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://seo360.xyz'
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),

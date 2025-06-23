@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server'
 
 export async function GET() {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://your-domain.com'
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://seo360.xyz'
   
   const robotsTxt = `User-agent: *
 Allow: /

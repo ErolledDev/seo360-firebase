@@ -39,6 +39,8 @@ class RedirectsApiClient {
 
   private async fetchFromApi(): Promise<RedirectsData> {
     try {
+      console.log('Fetching redirects from API:', this.API_URL)
+      
       const response = await fetch(this.API_URL, {
         headers: {
           'Accept': 'application/json',
@@ -51,6 +53,8 @@ class RedirectsApiClient {
       }
 
       const data = await response.json()
+      console.log('API Response received:', Object.keys(data).length, 'redirects')
+      console.log('Available slugs:', Object.keys(data).slice(0, 10)) // Log first 10 slugs
       
       // Update cache
       this.cache = data
@@ -75,11 +79,13 @@ class RedirectsApiClient {
   async getAllRedirects(): Promise<RedirectsData> {
     // Return cached data if valid
     if (this.isCacheValid()) {
+      console.log('Using cached redirects data')
       return this.cache!
     }
 
     // If already fetching, wait for that promise
     if (this.fetchPromise) {
+      console.log('Waiting for existing fetch promise')
       return this.fetchPromise
     }
 
@@ -89,8 +95,19 @@ class RedirectsApiClient {
   }
 
   async getRedirect(slug: string): Promise<RedirectData | null> {
+    console.log('Looking for redirect with slug:', slug)
+    
     const allRedirects = await this.getAllRedirects()
-    return allRedirects[slug] || null
+    const redirect = allRedirects[slug] || null
+    
+    if (redirect) {
+      console.log('Found redirect:', redirect.title)
+    } else {
+      console.log('Redirect not found for slug:', slug)
+      console.log('Available slugs:', Object.keys(allRedirects).slice(0, 20))
+    }
+    
+    return redirect
   }
 
   // Force refresh cache
@@ -105,7 +122,8 @@ class RedirectsApiClient {
     return {
       hasCachedData: this.cache !== null,
       cacheAge: this.cache ? Date.now() - this.cacheTimestamp : 0,
-      isValid: this.isCacheValid()
+      isValid: this.isCacheValid(),
+      totalRedirects: this.cache ? Object.keys(this.cache).length : 0
     }
   }
 }

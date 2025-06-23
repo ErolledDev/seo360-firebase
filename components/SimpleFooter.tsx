@@ -36,8 +36,8 @@ export default function SimpleFooter() {
                 </a>
               </li>
               <li>
-                <a href="https://seo-redirects.netlify.app" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-blue-400 transition-colors text-sm">
-                  Admin Panel
+                <a href="/contact" className="text-gray-300 hover:text-blue-400 transition-colors text-sm">
+                  Contact Us
                 </a>
               </li>
               <li>
@@ -70,11 +70,6 @@ export default function SimpleFooter() {
               <li>
                 <a href="/disclaimer" className="text-gray-300 hover:text-blue-400 transition-colors text-sm">
                   Disclaimer
-                </a>
-              </li>
-              <li>
-                <a href="/contact" className="text-gray-300 hover:text-blue-400 transition-colors text-sm">
-                  Contact Us
                 </a>
               </li>
             </ul>

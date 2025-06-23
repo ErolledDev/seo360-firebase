@@ -5,7 +5,18 @@ import { redirectsApi, RedirectData, RedirectsData } from '../../lib/redirectsAp
 
 async function getRedirectData(slug: string): Promise<RedirectData | null> {
   try {
-    return await redirectsApi.getRedirect(slug)
+    console.log('Fetching redirect data for slug:', slug)
+    const data = await redirectsApi.getRedirect(slug)
+    
+    if (!data) {
+      console.log('No redirect data found for slug:', slug)
+      // Let's also try to get all redirects to see what's available
+      const allRedirects = await redirectsApi.getAllRedirects()
+      console.log('Total redirects available:', Object.keys(allRedirects).length)
+      console.log('Sample slugs:', Object.keys(allRedirects).slice(0, 10))
+    }
+    
+    return data
   } catch (error) {
     console.error('Error fetching redirect data:', error)
     return null
@@ -33,7 +44,7 @@ export async function generateMetadata(
     }
   }
 
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://your-domain.com'
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://seo360.xyz'
   const canonicalUrl = `${baseUrl}/${params.slug}`
 
   return {
@@ -72,10 +83,13 @@ export async function generateMetadata(
 }
 
 export default async function SlugPage({ params }: { params: { slug: string } }) {
+  console.log('SlugPage called with params:', params)
+  
   const data = await getRedirectData(params.slug)
   const allRedirects = await getAllRedirects()
   
   if (!data) {
+    console.log('No data found, calling notFound()')
     notFound()
   }
 

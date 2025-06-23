@@ -107,7 +107,7 @@ export default function ContactPage() {
                 </li>
                 <li className="flex items-start space-x-2">
                   <span className="text-blue-600 font-bold">•</span>
-                  <span>Check our <a href="/admin" className="text-blue-600 hover:text-blue-800 underline">admin panel</a> for common solutions first</span>
+                  <span>Check our documentation for common solutions first</span>
                 </li>
               </ul>
             </div>
@@ -176,7 +176,7 @@ export default function ContactPage() {
                   id="redirect-url"
                   name="redirect-url"
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  placeholder="https://yoursite.com/your-redirect"
+                  placeholder="https://seo360.xyz/your-redirect"
                 />
               </div>
 
@@ -228,7 +228,7 @@ export default function ContactPage() {
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Can I edit redirects after creation?</h3>
                 <p className="text-gray-600 text-sm">
-                  Yes! You can edit all redirect details through the admin panel. Changes are reflected immediately 
+                  Yes! You can edit all redirect details through our system. Changes are reflected immediately 
                   and updated in the sitemap.
                 </p>
               </div>
