@@ -13,13 +13,10 @@ declare global {
 function GoogleAnalyticsContent() {
   const pathname = usePathname()
   const searchParams = useSearchParams()
-  const GA_ID = process.env.NEXT_PUBLIC_GA_ID
+  const GA_ID = process.env.NEXT_PUBLIC_GA_ID || 'G-FW926PK1HQ'
 
   useEffect(() => {
     if (!GA_ID || typeof window === 'undefined') return
-
-    // Prevent loading in development
-    if (process.env.NODE_ENV === 'development') return
 
     // Load Google Analytics script with performance optimizations
     const script1 = document.createElement('script')
@@ -55,7 +52,7 @@ function GoogleAnalyticsContent() {
   }, [GA_ID])
 
   useEffect(() => {
-    if (!GA_ID || !window.gtag || process.env.NODE_ENV === 'development') return
+    if (!GA_ID || !window.gtag) return
 
     const url = pathname + (searchParams.toString() ? `?${searchParams.toString()}` : '')
     
@@ -92,8 +89,10 @@ export default function GoogleAnalytics() {
 
 // Enhanced analytics hook with performance tracking
 export const useGoogleAnalytics = () => {
+  const GA_ID = process.env.NEXT_PUBLIC_GA_ID || 'G-FW926PK1HQ'
+
   const trackEvent = (action: string, category: string, label?: string, value?: number) => {
-    if (typeof window !== 'undefined' && window.gtag && process.env.NODE_ENV === 'production') {
+    if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', action, {
         event_category: category,
         event_label: label,
@@ -104,7 +103,7 @@ export const useGoogleAnalytics = () => {
   }
 
   const trackTiming = (name: string, value: number, category: string = 'Performance') => {
-    if (typeof window !== 'undefined' && window.gtag && process.env.NODE_ENV === 'production') {
+    if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'timing_complete', {
         name: name,
         value: value,
