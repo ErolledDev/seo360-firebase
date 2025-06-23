@@ -25,7 +25,7 @@ export default function CacheRefreshButton() {
       if (data.success) {
         showSuccess(
           'Cache refreshed successfully!', 
-          `Found ${data.redirectCount} redirects. Sitemap will update shortly.`
+          `Found ${data.redirectCount} redirects. Visit /sitemap.xml to see updated sitemap.`
         )
         
         // Also refresh the current page to see changes
@@ -60,6 +60,11 @@ export default function CacheRefreshButton() {
     }
   }
 
+  const testSitemap = () => {
+    const sitemapUrl = `${window.location.origin}/sitemap.xml?t=${Date.now()}`
+    window.open(sitemapUrl, '_blank')
+  }
+
   return (
     <div className="fixed bottom-4 right-4 z-50 space-y-2">
       <button
@@ -92,6 +97,16 @@ export default function CacheRefreshButton() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
         Check Status
+      </button>
+
+      <button
+        onClick={testSitemap}
+        className="flex items-center px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 shadow-lg transition-all duration-200 w-full"
+      >
+        <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+        </svg>
+        Test Sitemap
       </button>
     </div>
   )

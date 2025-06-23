@@ -14,7 +14,9 @@ export async function POST() {
       message: 'Cache refreshed successfully',
       redirectCount: Object.keys(freshData).length,
       timestamp: new Date().toISOString(),
-      cacheStatus: redirectsApi.getCacheStatus()
+      cacheStatus: redirectsApi.getCacheStatus(),
+      sitemapUrl: `${process.env.NEXT_PUBLIC_BASE_URL || 'https://seo360.xyz'}/sitemap.xml`,
+      note: 'Sitemap will be updated on next request with fresh data'
     }
     
     console.log('Cache refresh response:', response)
@@ -54,7 +56,8 @@ export async function GET() {
     return NextResponse.json({
       success: true,
       cacheStatus,
-      timestamp: new Date().toISOString()
+      timestamp: new Date().toISOString(),
+      sitemapUrl: `${process.env.NEXT_PUBLIC_BASE_URL || 'https://seo360.xyz'}/sitemap.xml`
     }, {
       headers: {
         'Cache-Control': 'no-cache, no-store, must-revalidate',

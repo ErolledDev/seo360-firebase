@@ -9,10 +9,11 @@ export async function GET() {
     
     const currentDate = new Date().toISOString().split('T')[0]
     
-    // Force refresh the cache to get latest data
+    // Force refresh the cache to get latest data - ALWAYS refresh in production
     let redirects = {}
     try {
       console.log('Force refreshing redirects cache for sitemap...')
+      // Always force refresh for sitemap to ensure latest data
       redirects = await redirectsApi.refreshCache()
       console.log('Sitemap generation - Fresh redirects loaded:', Object.keys(redirects).length)
     } catch (error) {
@@ -72,17 +73,33 @@ export async function GET() {
     console.log('Sitemap generated successfully with base URL:', baseUrl)
     console.log('Total URLs in sitemap:', Object.keys(redirects).length + 5) // +5 for static pages
     
+    // Generate unique ETag based on content and timestamp
+    const contentHash = Buffer.from(sitemap).toString('base64').slice(0, 16)
+    const timestamp = Date.now()
+    const etag = `"${contentHash}-${timestamp}"`
+    
     return new NextResponse(sitemap, {
       headers: {
         'Content-Type': 'application/xml; charset=utf-8',
-        // Reduce cache time to see changes faster
-        'Cache-Control': 'public, max-age=300, s-maxage=300, stale-while-revalidate=600',
+        // Disable all caching to ensure fresh data
+        'Cache-Control': 'no-cache, no-store, must-revalidate, max-age=0',
+        'Pragma': 'no-cache',
+        'Expires': '0',
+        // Add headers to prevent CDN caching
+        'Surrogate-Control': 'no-store',
+        'CDN-Cache-Control': 'no-store',
+        // CORS headers
         'Access-Control-Allow-Origin': '*',
         'Access-Control-Allow-Methods': 'GET',
         'Access-Control-Allow-Headers': 'Content-Type',
-        // Add timestamp to help with debugging
+        // Add timestamp and count for debugging
         'X-Generated-At': new Date().toISOString(),
         'X-Redirect-Count': Object.keys(redirects).length.toString(),
+        'X-Cache-Busted': 'true',
+        // Unique ETag to force refresh
+        'ETag': etag,
+        // Vary header to prevent caching based on different factors
+        'Vary': 'Accept-Encoding, User-Agent',
       },
     })
   } catch (error) {
@@ -129,12 +146,17 @@ export async function GET() {
     return new NextResponse(basicSitemap, {
       headers: {
         'Content-Type': 'application/xml; charset=utf-8',
-        'Cache-Control': 'public, max-age=300, s-maxage=300, stale-while-revalidate=600',
+        'Cache-Control': 'no-cache, no-store, must-revalidate, max-age=0',
+        'Pragma': 'no-cache',
+        'Expires': '0',
+        'Surrogate-Control': 'no-store',
+        'CDN-Cache-Control': 'no-store',
         'Access-Control-Allow-Origin': '*',
         'Access-Control-Allow-Methods': 'GET',
         'Access-Control-Allow-Headers': 'Content-Type',
         'X-Generated-At': new Date().toISOString(),
         'X-Error': 'true',
+        'X-Cache-Busted': 'true',
       },
     })
   }

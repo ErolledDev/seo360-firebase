@@ -20,7 +20,7 @@ class RedirectsApiClient {
   private static instance: RedirectsApiClient
   private cache: RedirectsData | null = null
   private cacheTimestamp: number = 0
-  private readonly CACHE_DURATION = 2 * 60 * 1000 // Reduced to 2 minutes for faster updates
+  private readonly CACHE_DURATION = 1 * 60 * 1000 // Reduced to 1 minute for faster updates
   private readonly API_URL = 'https://seo-redirects.netlify.app/api/redirects.json'
   private fetchPromise: Promise<RedirectsData> | null = null
 
@@ -37,21 +37,27 @@ class RedirectsApiClient {
     return this.cache !== null && (Date.now() - this.cacheTimestamp) < this.CACHE_DURATION
   }
 
-  private async fetchFromApi(): Promise<RedirectsData> {
+  private async fetchFromApi(forceFresh: boolean = false): Promise<RedirectsData> {
     try {
-      console.log('Fetching redirects from API:', this.API_URL)
+      console.log('Fetching redirects from API:', this.API_URL, forceFresh ? '(FORCE FRESH)' : '')
       
       // Add cache busting parameter to ensure fresh data
       const cacheBuster = Date.now()
-      const urlWithCacheBuster = `${this.API_URL}?t=${cacheBuster}`
+      const randomSuffix = Math.random().toString(36).substring(7)
+      const urlWithCacheBuster = `${this.API_URL}?t=${cacheBuster}&r=${randomSuffix}`
       
       const response = await fetch(urlWithCacheBuster, {
         headers: {
           'Accept': 'application/json',
           'Cache-Control': 'no-cache, no-store, must-revalidate',
           'Pragma': 'no-cache',
-          'Expires': '0'
-        }
+          'Expires': '0',
+          // Add additional headers to bypass any caching
+          'X-Requested-With': 'XMLHttpRequest',
+          'X-Cache-Bust': cacheBuster.toString(),
+        },
+        // Add cache busting at the request level
+        cache: 'no-store',
       })
 
       if (!response.ok) {
@@ -82,7 +88,16 @@ class RedirectsApiClient {
     }
   }
 
-  async getAllRedirects(): Promise<RedirectsData> {
+  async getAllRedirects(forceFresh: boolean = false): Promise<RedirectsData> {
+    // Force fresh data if requested (for sitemap generation)
+    if (forceFresh) {
+      console.log('Force fetching fresh data...')
+      this.cache = null
+      this.cacheTimestamp = 0
+      this.fetchPromise = null
+      return this.fetchFromApi(true)
+    }
+
     // Return cached data if valid
     if (this.isCacheValid()) {
       console.log('Using cached redirects data')
@@ -122,7 +137,7 @@ class RedirectsApiClient {
     this.cache = null
     this.cacheTimestamp = 0
     this.fetchPromise = null
-    return this.getAllRedirects()
+    return this.getAllRedirects(true)
   }
 
   // Clear cache completely
