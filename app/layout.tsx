@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: process.env.GOOGLE_VERIFICATION_CODE,
+    google: 'JKqRPUBMXUyNMooc5zHpf5VmBA39BT4QR1PxAaTA_Us',
     yandex: process.env.YANDEX_VERIFICATION_CODE,
     yahoo: process.env.YAHOO_VERIFICATION_CODE,
     other: {
@@ -97,6 +97,9 @@ export default function RootLayout({
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        
+        {/* Google Search Console Verification */}
+        <meta name="google-site-verification" content="JKqRPUBMXUyNMooc5zHpf5VmBA39BT4QR1PxAaTA_Us" />
         
         {/* Preconnect to external domains for performance */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
